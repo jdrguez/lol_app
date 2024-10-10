@@ -1,0 +1,222 @@
+html{
+    background-color: rgb(82, 82, 82);
+}
+
+
+header {
+    padding: 20px 0;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo_img {
+    width: 240px;
+    margin-left: 105px;
+}
+
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+
+.container_button {
+    padding-top: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    font-family: 'Marcellus SC', serif;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 5px 15px; 
+    background: #1e2328;
+    color: #cdbe91;
+    box-shadow: inset 0 0 2px #000000;
+    border-image: linear-gradient(to bottom, #c8aa6d, #7a5c29);
+    border-image-slice: 1;
+    border-width: 2px;
+}
+
+button:hover{
+    cursor: pointer;
+    text-shadow: 0 0 5px #ffffff80;
+    box-shadow: 0 0 8px 0 #ffffff50;
+    background: linear-gradient(to bottom, #1e2328, #433d2b);
+    transition: 0.1s;
+}
+
+
+
+#msg_load{
+    text-align: center;
+    justify-content: center;
+    color: gold;
+    font-family: 'Marcellus SC', serif;
+    font-size: large;
+    visibility: hidden;
+}
+
+
+
+/* Pokedex */
+
+#champions {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px 15px;
+    width: 100%;
+}
+
+@keyframes cardLoad {
+    0%{
+        opacity: 0;
+        transform:scale(0.5) ;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+.card {
+    font-family: 'Marcellus SC', serif;
+    border: 2px solid rgb(78, 78, 78);
+    border-radius: 5px;
+    background: #1e2328;
+    text-align: center;
+    color: #cdbe91;
+    transition: transform 0.2s ease-out;
+    border-image: linear-gradient(to bottom, #c8aa6d, #7a5c29);
+    border-image-slice: 1;
+    border-width: 2px;
+    animation: cardLoad 0.5s ease forwards;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    position: relative;
+}
+
+.card:hover{
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+a.category{
+    position:absolute;
+    width:auto;
+    padding:7px 14px;
+    background:pink;
+    color:#000;
+    left:20px; top:15px; 
+    border-radius:20px;
+    font-size:10px;
+    z-index:6;
+    transition:0.6s;
+    text-transform:uppercase;
+    top:15px;
+
+}
+
+.img_class{
+    padding: 15px;
+}
+
+
+.icon{
+    vertical-align: middle;
+    padding: 5px;
+}
+.types{
+    font-size: medium;
+    font-family: 'Marcellus SC', serif;
+}
+
+.container_icons{
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo{
+    width: 450px;
+}
+
+
+.card_back{
+    position: relative;
+    font-family: 'Marcellus SC', serif;
+    border: 2px solid rgb(78, 78, 78);
+    border-radius: 5px;
+    background: #1e2328;
+    text-align: center;
+    color: #cdbe91;
+    transition: border-color 0.3s ease;
+    border-image: linear-gradient(to bottom, #c8aa6d, #7a5c29);
+    border-image-slice: 1;
+    border-width: 2px;
+    animation: cardLoad 0.5s ease forwards;
+}
+
+.card_front_{
+    backface-visibility: hidden;
+}
+
+
+
+.card.Mage:hover{
+    border-image: linear-gradient(to bottom, #005A82, #0AC8B9);
+    border-image-slice: 1;
+    border-width: 2px;
+}
+
+.card.Assassin:hover{
+    border-image: linear-gradient(to bottom, #6d0101, #ff0000);
+    border-image-slice: 1;
+    border-width: 2px;
+}
+
+.card.Marksman:hover{
+    border-image: linear-gradient(to bottom, #944f00, #ff9100);
+    border-image-slice: 1;
+    border-width: 2px;
+}
+.card.Support:hover{
+    border-image: linear-gradient(to bottom, #224b00, #15ff00);
+    border-image-slice: 1;
+    border-width: 2px;
+}
+.card.Fighter:hover{
+    border-image: linear-gradient(to bottom, #560158, #ff00ff);
+    border-image-slice: 1;
+    border-width: 2px;
+}
+.card.Tank:hover{
+    border-image: linear-gradient(to bottom, #0c016d, #fbff00);
+    border-image-slice: 1;
+    border-width: 2px;
+}
+
